@@ -1,0 +1,33 @@
+{
+  "name": "TestReact",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "bundle": "react-native bundle --platform=ios --dev=false --entry-file=index.js --bundle-output build/TestReact.js --sourcemap-output build/TestReact.js.map --assets-dest build && rm -rf build/assets/node_modules",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "^16.3.0-alpha.1",
+    "react-native": "0.54.2",
+    "react-navigation": "^1.5.11",
+    "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.10.0"
+  },
+  "devDependencies": {
+    "babel-jest": "23.0.0-alpha.0",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.4.2",
+    "react-native-typescript-transformer": "^1.2.3",
+    "react-test-renderer": "^16.3.0-alpha.1",
+    "typescript": "^2.7.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
+  }
+}
